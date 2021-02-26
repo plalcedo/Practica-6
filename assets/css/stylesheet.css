@@ -1,0 +1,123 @@
+* {
+    font-family: Verdana;
+}
+
+:root {
+    --primary: darkcyan;
+}
+
+
+/* Section 1 */
+
+.s1 div :first-child {
+    color: var(--primary);
+}
+
+.s1 div :last-child {
+    color: blue;
+}
+
+
+/* Section 2*/
+
+.s2 div :nth-child(even) {
+    color: red;
+}
+
+.s2 div :nth-last-child(6) {
+    color: blue;
+}
+
+
+/* Section 3 */
+
+.s3 div p:nth-of-type(2) {
+    color: red;
+}
+
+.s3 div p:nth-last-of-type(1) {
+    color: blue;
+}
+
+
+/* Section 4 */
+
+.s4 div :only-child {
+    color: red;
+}
+
+
+/* Section 5 */
+
+.s5 div span:only-of-type {
+    color: blue;
+}
+
+#links li a {
+    color: red;
+}
+
+a #links li a:hover {
+    color: violet;
+}
+
+#links li a:visited {
+    color: green;
+}
+
+
+/* Pseudo elementos */
+
+.cuadro {
+    width: 500px;
+    height: 200px;
+    background-color: teal;
+}
+
+.exciting-text::before {
+    content: "EXCITING -> ";
+    color: green;
+}
+
+.boring-text::after {
+    content: " <- BORING";
+    color: red;
+}
+
+.cuadro::after {
+    content: '';
+    display: inline-block;
+    background-color: blue;
+    width: 500px;
+    height: 20px;
+}
+
+.cuadro::before {
+    content: '';
+    display: inline-block;
+    background-color: red;
+    width: 500px;
+    height: 20px;
+}
+
+.inpt {
+    border: 2px black solid;
+}
+
+.inpt:invalid {
+    border: 2px red solid;
+    transition: 0.5s;
+}
+
+.inpt:valid {
+    border: 2px green solid;
+    transition: 0.5s;
+}
+
+.inpt:required {
+    border: 2px yellow solid;
+}
+
+.inpt:focus {
+    border: 5px blue solid;
+}
